@@ -1,6 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 
-export const theme = createTheme({
+// Create a theme instance.
+const theme = createTheme({
   palette: {
     primary: {
       main: "#574CE6",
@@ -74,10 +75,17 @@ export const theme = createTheme({
       fontWeight: 300,
       fontSize: "1.3rem",
     },
+    body1: {
+      fontFamily: "Inter",
+      fontWeight: 400,
+      fontSize: "1.4rem",
+    },
     button: {
       fontFamily: "Inter",
       fontWeight: 500,
-      fontSize: "1rem",
+      fontSize: "1.4rem",
     },
   },
 });
+
+export default theme;

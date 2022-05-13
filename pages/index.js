@@ -1,9 +1,19 @@
 import { BaseLayout } from "@components/ui/layout";
-import Head from "next/head";
-import Image from "next/image";
+import { Typography, Button, Container, Box } from "@mui/material";
 
-export default function Home() {
-  return <div>home page</div>;
+export default function Index() {
+  return (
+    <Container maxWidth="xl">
+      <Box sx={{ my: 4 }}>
+        <Typography variant="body1" color="primary" gutterBottom>
+         SCV-chain
+        </Typography>
+        <Button variant="contained" color="primary">
+          Connect
+        </Button>
+      </Box>
+    </Container>
+  );
 }
 
-Home.Layout = BaseLayout;
+Index.Layout = BaseLayout;
