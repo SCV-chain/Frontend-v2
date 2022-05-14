@@ -1,7 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import createEmotionCache from "@styles/createEmotionCache";
 import createEmotionServer from "@emotion/server/create-instance";
-import theme from '@styles/theme';
+import theme from "@styles/theme";
 
 class MyDocument extends Document {
   render() {
@@ -10,18 +10,7 @@ class MyDocument extends Document {
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
-
           <link rel="shortcut icon" href="/favicon.ico" />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossOrigin="true"
-          />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap"
-            rel="stylesheet"
-          />
           {/* Inject MUI styles first to match with the prepend: true configuration. */}
           {this.props.emotionStyleTags}
         </Head>
