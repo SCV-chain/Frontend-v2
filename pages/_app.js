@@ -1,14 +1,15 @@
 import { CacheProvider } from "@emotion/react";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import createEmotionCache from "@styles/createEmotionCache";
+import createEmotionCache from "utility/createEmotionCache";
 import "@styles/globals.css";
 import theme from "@styles/theme";
 import Head from "next/head";
 import PropTypes from "prop-types";
+import { StoreProvider } from "@lib/zustandProvider";
+import { useHydrate } from "@lib/store";
 
 const Noop = ({ children }) => <>{children}</>;
-
 // Client-side cache shared for the whole session
 // of the user in the browser.
 
@@ -19,12 +20,18 @@ function MyApp({
   pageProps,
   emotionCache = clientSideEmotionCache,
 }) {
+  const store = useHydrate(pageProps.initialZustandState);
+
   const Layout = Component.Layout ?? Noop;
   return (
     <CacheProvider value={emotionCache}>
       <Head>
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
-        <title>SmartCV</title>
+        <meta charSet="utf-8" />
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
+        />
+        <title>Talio - Labor hub for matching talents</title>
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, 
@@ -33,7 +40,9 @@ function MyApp({
 
         <CssBaseline />
         <Layout>
-          <Component {...pageProps} />
+          <StoreProvider store={store}>
+            <Component {...pageProps} />
+          </StoreProvider>
         </Layout>
       </ThemeProvider>
     </CacheProvider>

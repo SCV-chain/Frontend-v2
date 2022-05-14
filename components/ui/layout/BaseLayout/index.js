@@ -8,7 +8,7 @@ export default function BaseLayout({ children }) {
   return (
     <Box>
       <Header />
-      {children}
+      <main>{children}</main>
       <Footer />
     </Box>
   );
