@@ -41,14 +41,14 @@ let theme = createTheme({
   typography: {
     // Tell MUI what's the font-size on the html element is.
     htmlFontSize: 10,
-    fontFamily: "Inter",
+    fontFamily: ["Inter", '"Helvetica Neue"', "Arial", "sans-serif"].join(","),
     fontWeightLight: 300,
     fontWeightRegular: 400,
     fontWeightMedium: 500,
+    fontWeightSemiBold: 600,
     fontWeightBold: 700,
     fontSize: 14,
     button: {
-      fontFamily: "Inter",
       fontWeight: 500,
       fontSize: "1.6rem",
     },
