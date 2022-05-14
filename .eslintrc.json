@@ -1,28 +1,18 @@
 {
   "root": true,
-  "ignorePatterns": ["/app"],
-  "parser": "@typescript-eslint/parser",
-  "extends": ["next", "prettier","plugin:@next/next/recommended","eslint:recommended"],
-  "plugins": ["@typescript-eslint/eslint-plugin", "simple-import-sort", "unused-imports"],
+  "extends": ["next", "prettier","eslint:recommended"],
+  "plugins": ["react"],
   "rules": {
     "react/no-unescaped-entities": "off",
-    "@next/next/no-page-custom-font": "off",
-    // Simple Import Sort
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
-    // Unused Imports
-    "no-unused-vars": "off",
-    "unused-imports/no-unused-imports": "error",
-    "unused-imports/no-unused-vars": [
-      "warn",
-      {
-        "vars": "all",
-        "varsIgnorePattern": "^_",
-        "args": "none",
-        "argsIgnorePattern": "^_"
-      }
-    ]
+    "@next/next/no-page-custom-font": "off"
   },
+  "parserOptions": {
+    "ecmaFeatures": {
+        "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+},
   "overrides": [
     {
       "files": ["*.js"]
