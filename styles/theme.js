@@ -38,6 +38,10 @@ let theme = createTheme({
       dark: '#1b5e20',
       contrastText: '#fff',
     },
+    text: {
+      primary: '#4A4950',
+      secondary: '#666666',
+    },
   },
   typography: {
     // Tell MUI what's the font-size on the html element is.
