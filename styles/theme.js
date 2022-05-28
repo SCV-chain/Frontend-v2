@@ -1,17 +1,18 @@
 import { createTheme, responsiveFontSizes } from '@mui/material/styles'
-
 // Create a theme instance.
 let theme = createTheme({
   palette: {
     primary: {
-      main: '#574CE6',
+      main: '#896EFF',
       dark: '#575CE6',
       light: '#575CE9',
+      contrastText: '#4A4950',
     },
     secondary: {
       main: '#77CDFE',
       dark: ' #C193F5',
       light: '#FFE345',
+      contrastText: '#fafafa',
     },
     error: {
       main: '#d32f2f',
@@ -37,6 +38,10 @@ let theme = createTheme({
       dark: '#1b5e20',
       contrastText: '#fff',
     },
+    text: {
+      primary: '#4A4950',
+      secondary: '#666666',
+    },
   },
   typography: {
     // Tell MUI what's the font-size on the html element is.
@@ -53,6 +58,7 @@ let theme = createTheme({
       fontSize: '1.6rem',
     },
   },
+
   components: {
     // Name of the component
     // MuiButton: {
