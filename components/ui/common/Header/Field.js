@@ -1,6 +1,6 @@
 import React from 'react'
-import { Autocomplete, Box, InputBase } from 'node_modules/@mui/material/index'
-import { KeyboardArrowDown } from 'node_modules/@mui/icons-material/index'
+import { Autocomplete, Box, InputBase } from '@mui/material'
+import { KeyboardArrowDown } from '@mui/icons-material'
 
 const Field = (props) => {
   return (

@@ -9,7 +9,7 @@ let theme = createTheme({
       contrastText: '#4A4950',
     },
     secondary: {
-      main: '#77CDFE',
+      main: '#ff457c',
       dark: ' #C193F5',
       light: '#FFE345',
       contrastText: '#fafafa',
@@ -21,7 +21,7 @@ let theme = createTheme({
       contrastText: '#fff',
     },
     warning: {
-      main: '#ed6c02',
+      main: '#fcd036',
       light: '#ff9800',
       dark: '#e65100',
       contrastText: '#fff',
@@ -33,14 +33,18 @@ let theme = createTheme({
       contrastText: '#fff',
     },
     success: {
-      main: '#2e7d32',
-      light: '#4caf50',
+      main: '#6bda70',
+      light: '#63E068',
       dark: '#1b5e20',
       contrastText: '#fff',
     },
     text: {
-      primary: '#4A4950',
       secondary: '#666666',
+    },
+    icons: {
+      primary: '#63E068',
+      secondary: '#FDD95E',
+      basic: '#E7E7E7',
     },
   },
   typography: {
