@@ -39,12 +39,18 @@ let theme = createTheme({
       contrastText: '#fff',
     },
     text: {
+      primary: '#4A4950',
       secondary: '#666666',
+      contrastText: '#F9FAFF',
     },
     icons: {
       primary: '#63E068',
       secondary: '#FDD95E',
       basic: '#E7E7E7',
+      start: '#635BFF',
+    },
+    card: {
+      primary: '#F5F5F5',
     },
   },
   typography: {
