@@ -1,5 +1,5 @@
 import SearchIcon from '@mui/icons-material/Search'
-import { Person } from 'node_modules/@mui/icons-material/index'
+import { Person } from '@mui/icons-material/index'
 import {
   Box,
   Button,
@@ -8,8 +8,8 @@ import {
   InputBase,
   Stack,
   Typography,
-} from 'node_modules/@mui/material/index'
-import Image from 'node_modules/next/image'
+} from '@mui/material'
+import Image from 'next/image'
 import React from 'react'
 import Field from './Field'
 import { CATEGORY, EXPERIENCE, POSITION, WORK_PLACE, WORK_TYPE } from './filter'
@@ -19,26 +19,13 @@ export default function Header() {
     <Box
       backgroundColor="primary.main"
       sx={{
-        height: 123,
-        px: 3,
+        p: 3,
       }}
     >
       <Grid container justifyContent="center" alignItems="center" pt={2}>
         <Grid item xs={2}>
           <Stack spacing={1} direction="row" alignItems="center">
-            <Image src="/talio_logo_1.png" alt="logo" width={40} height={41} />
-            <Typography
-              sx={{
-                lineHeight: 1,
-                textAlign: 'center',
-                fontWeight: '600',
-                color: '#F9FAFF',
-              }}
-              component="h2"
-              variant="h4"
-            >
-              TALIO
-            </Typography>
+            <Image src="/icons/ic_logo_white.svg" alt="logo" width={100} height={41} />
           </Stack>
         </Grid>
         <Grid item xs={8}>
@@ -66,11 +53,10 @@ export default function Header() {
                 endAdornment={
                   <IconButton
                     sx={{
-                      width: 36,
-                      height: 36,
+                      fontSize: 36,
                       backgroundColor: 'primary.dark',
                       color: '#ffffff',
-                      mb: 0.7,
+                      mb: 0.5,
                     }}
                   >
                     <SearchIcon sx={{ fontSize: '2.4rem' }} />
@@ -100,8 +86,6 @@ export default function Header() {
               sx={{
                 color: '#F9FAFF',
                 fontWeight: '600',
-                width: 148,
-                height: 38,
                 fontSize: 18,
               }}
             >
