@@ -1,17 +1,18 @@
 import { createTheme, responsiveFontSizes } from '@mui/material/styles'
-
 // Create a theme instance.
 let theme = createTheme({
   palette: {
     primary: {
-      main: '#574CE6',
+      main: '#896EFF',
       dark: '#575CE6',
       light: '#575CE9',
+      contrastText: '#4A4950',
     },
     secondary: {
-      main: '#77CDFE',
+      main: '#ff457c',
       dark: ' #C193F5',
       light: '#FFE345',
+      contrastText: '#fafafa',
     },
     error: {
       main: '#d32f2f',
@@ -20,7 +21,7 @@ let theme = createTheme({
       contrastText: '#fff',
     },
     warning: {
-      main: '#ed6c02',
+      main: '#fcd036',
       light: '#ff9800',
       dark: '#e65100',
       contrastText: '#fff',
@@ -32,10 +33,24 @@ let theme = createTheme({
       contrastText: '#fff',
     },
     success: {
-      main: '#2e7d32',
-      light: '#4caf50',
+      main: '#6bda70',
+      light: '#63E068',
       dark: '#1b5e20',
       contrastText: '#fff',
+    },
+    text: {
+      primary: '#4A4950',
+      secondary: '#666666',
+      contrastText: '#F9FAFF',
+    },
+    icons: {
+      primary: '#63E068',
+      secondary: '#FDD95E',
+      basic: '#E7E7E7',
+      start: '#635BFF',
+    },
+    card: {
+      primary: '#F5F5F5',
     },
   },
   typography: {
@@ -53,6 +68,7 @@ let theme = createTheme({
       fontSize: '1.6rem',
     },
   },
+
   components: {
     // Name of the component
     // MuiButton: {
